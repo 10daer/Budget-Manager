@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense Tracker</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Budget Manager</h1>
+    <div id="login-section">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+    </div>
+    <div id="expense-section" style="display: none">
+      <h2>Add Expense</h2>
+      <input type="text" id="expense-name" placeholder="Expense Name" />
+      <input type="number" id="expense-amount" placeholder="Amount" />
+      <button id="add-expense-btn">Add Expense</button>
+      <h2>Set Expense Limit</h2>
+      <input type="number" id="expense-limit" placeholder="Limit" />
+      <button id="set-limit-btn">Set Limit</button>
+      <button id="logout-btn">Logout</button>
+      <div id="notification" style="color: red; display: none">
+        Expense limit exceeded!
+      </div>
+    </div>
+  </body>
+</html>
